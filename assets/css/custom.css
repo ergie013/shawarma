@@ -1461,7 +1461,6 @@ table > tbody > tr {
 .magic-radio + label,
 .magic-checkbox + label {
 	position: relative;
-	display: block;
 	cursor: pointer;
 	vertical-align: middle;
 	line-height: 30px;
