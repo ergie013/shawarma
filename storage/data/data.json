@@ -1,6 +1,10 @@
 [{
 		"key": "storeColor",
-		"value": "#fc8019"
+		"value": "rgb(255, 200, 16)"
+	},
+	{
+		"key": "setloccolor",
+		"value": "rgb(255, 200, 16)"
 	},
 	{
 		"key": "splashLogo",
@@ -414,7 +418,7 @@
 	},
 	{
 		"key": "registerRegisterTitle",
-		"value": "Register"
+		"value": "Sign Up"
 	},
 	{
 		"key": "registerRegisterSubTitle",
@@ -422,7 +426,7 @@
 	},
 	{
 		"key": "firstScreenRegisterBtn",
-		"value": "Register"
+		"value": "Sign UP"
 	},
 	{
 		"key": "loginDontHaveAccount",

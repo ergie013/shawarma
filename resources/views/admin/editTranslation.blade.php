@@ -277,14 +277,14 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-lg-3 col-form-label"><strong>Register Button Text</strong></label>
+                    <label class="col-lg-3 col-form-label"><strong>Sign Up Button Text</strong></label>
                     <div class="col-lg-9">
                         <input type="text" class="form-control form-control-lg" name="firstScreenRegisterBtn"
                             value="{{ $data->firstScreenRegisterBtn }}" placeholder="Register Button">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-lg-3 col-form-label"><strong>Register Text</strong></label>
+                    <label class="col-lg-3 col-form-label"><strong>Sign-UP Text</strong></label>
                     <div class="col-lg-9">
                         <input type="text" class="form-control form-control-lg" name="registerRegisterTitle"
                             value="{{ $data->registerRegisterTitle }}" placeholder="Register Text">

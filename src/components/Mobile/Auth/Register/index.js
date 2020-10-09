@@ -360,7 +360,7 @@ class Register extends Component {
 						</div>
 					</div>
 					<img
-						src="/assets/img/login-header.png"
+						src="/assets/img/login-head.png"
 						className="login-image pull-right mr-15"
 						alt="login-header"
 					/>
@@ -438,9 +438,29 @@ class Register extends Component {
 								className="btn btn-main"
 								style={{ backgroundColor: localStorage.getItem("storeColor") }}
 							>
-								{localStorage.getItem("registerRegisterTitle")}
+								Sign Up
+							</button>
+						
+						<p class="login-or mt-2">OR</p>
+						
+							<button
+								className="btn facebook-login-button btn-block"
+								style={{ backgroundColor: localStorage.getItem("storeColor") }}
+								
+							>
+								Login with Facebook Account
+							</button>
+						
+						
+							<button
+								className="btn google-login-button btn-block"
+								style={{ backgroundColor: localStorage.getItem("storeColor") }}
+								
+							>
+								Login with Google Account
 							</button>
 						</div>
+
 					</form>
 
 					<form onSubmit={this.handleVerifyOtp} id="otpForm" className="hidden">
