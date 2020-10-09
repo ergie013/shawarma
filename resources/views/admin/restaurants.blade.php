@@ -17,12 +17,11 @@
 <div class="page-header">
     <div class="page-header-content header-elements-md-inline">
         <div class="page-title d-flex">
-            <h4><i class="icon-circle-right2 mr-2"></i>
-                @if(empty($query))
-                <span class="font-weight-bold mr-2">TOTAL</span>
+            <h4>@if(empty($query))
+                <span class="font-weight-bold mr-2">Restaurant</span>
                 <span class="badge badge-primary badge-pill animated flipInX">{{ $count }}</span>
                 @else
-                <span class="font-weight-bold mr-2">TOTAL</span>
+                <span class="font-weight-bold mr-2">Restaurants</span>
                 <span class="badge badge-primary badge-pill animated flipInX mr-2">{{ $count }}</span>
                 <span class="font-weight-bold mr-2">Results for "{{ $query }}"</span>
                 @endif
@@ -31,28 +30,12 @@
         </div>
         <div class="header-elements d-none py-0 mb-3 mb-md-0">
             <div class="breadcrumb">
-                <a href="{{ route('admin.sortStores') }}"
-                    class="btn btn-secondary btn-labeled btn-labeled-left mr-2">
-                    <b><i class="icon-sort"></i></b>
-                    Sort Stores
-                </a>
-                @if(!Request::is('admin/stores/pending-acceptance'))
-                <a href="{{ route('admin.pendingAcceptance') }}"
-                    class="btn btn-secondary btn-labeled btn-labeled-left mr-2">
-                    <b><i class="icon-exclamation"></i></b>
-                    Pending Approval Stores
-                </a>
-                @endif
+        
                 @if(Request::is('admin/stores'))
                 <button type="button" class="btn btn-secondary btn-labeled btn-labeled-left mr-2" id="addNewRestaurant"
                     data-toggle="modal" data-target="#addNewRestaurantModal">
                     <b><i class="icon-plus2"></i></b>
-                    Add New Store
-                </button>
-                <button type="button" class="btn btn-secondary btn-labeled btn-labeled-left" id="addBulkRestaurant"
-                    data-toggle="modal" data-target="#addBulkRestaurantModal">
-                    <b><i class="icon-database-insert"></i></b>
-                    Bulk CSV Upload
+                    Add New Restaurant
                 </button>
                 @endif
             </div>
@@ -60,17 +43,6 @@
     </div>
 </div>
 <div class="content">
-    <form action="{{ route('admin.post.searchRestaurants') }}" method="GET">
-        <div class="form-group form-group-feedback form-group-feedback-right search-box">
-            <input type="text" class="form-control form-control-lg search-input" placeholder="Search with store name"
-                name="query">
-            <div class="form-control-feedback form-control-feedback-lg">
-                <i class="icon-search4"></i>
-            </div>
-        </div>
-        <button type="submit" class="hidden">Search</button>
-        @csrf
-    </form>
     <div class="card">
         <div class="card-body">
             <div class="table-responsive">
@@ -172,8 +144,18 @@
                     {{ $restaurants->appends($_GET)->links() }}
                 </div>
             </div>
+            
         </div>
+        @if(!count($restaurants))
+                <div class="text-center text-muted pb-2" id="noRestaurantMessage" style="min-height: 15rem;">
+                <img src="{{substr(url("/"), 0, strrpos(url("/"), '/'))}}/assets/backend/global_assets/images/screen1.png" height="80px" margin="20px">
+                    <h4 style="margin-top: 20px; color: #737679"> No Restaurant yet. </h4>
+                </div>
+                @endif
+            </div>
+            </div>
     </div>
+    
 </div>
 <div id="addNewRestaurantModal" class="modal fade" tabindex="-1">
     <div class="modal-dialog modal-lg">
@@ -533,13 +515,13 @@
         if (Array.prototype.forEach) {
                var elems = Array.prototype.slice.call(document.querySelectorAll('.action-switch'));
                elems.forEach(function(html) {
-                   var switchery = new Switchery(html, { color: '#8360c3' });
+                   var switchery = new Switchery(html, { color: '#ffc810' });
                });
            }
            else {
                var elems = document.querySelectorAll('.action-switch');
                for (var i = 0; i < elems.length; i++) {
-                   var switchery = new Switchery(elems[i], { color: '#8360c3' });
+                   var switchery = new Switchery(elems[i], { color: '#ffc810' });
                }
            }
 

@@ -12,7 +12,7 @@
         <div class="col-xl-8" id="printThis">
             <div class="sidebar-category mt-4" style="box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.05);background-color: #fff;">
                 <div class="category-content">
-                    <div href="#" class="btn btn-block content-group" style="text-align: left; background-color: #8360c3; color: #fff; border-radius: 0;"><strong style="font-size: 1.3rem;">{{ $order->unique_order_id }}</strong>
+                    <div href="#" class="btn btn-block content-group" style="text-align: left; background-color: #ffc810; color: #fff; border-radius: 0;"><strong style="font-size: 1.3rem;">{{ $order->unique_order_id }}</strong>
                         <a href="javascript:void(0)" id="printButton" class="btn btn-sm" style="color: #fff; border: 1px solid #ccc; float: right;">{{__('storeDashboard.ovPrint')}}</a>
                     </div>
                     <div class="p-3">

@@ -110,20 +110,23 @@ body {
 	margin-top: 0.9375rem;
 }
 .btn-setup-location {
+	background-color: rgb(255, 200, 30) !important;
 	width: 16rem;
 	height: 4rem;
 	margin: 0 auto;
 	font-size: 1.1rem;
 	font-weight: 700;
 	display: block;
-	color: #fff;
-	text-transform: uppercase;
-	border-radius: 1px;
+	color: white;
 	text-align: center;
 	line-height: 2.7rem;
+    border-radius: 8px;
+    text-transform: capitalize;
+    box-shadow: 4px 4px 20px rgba(235, 184, 14, 0.4);
 }
 .btn-setup-location:hover {
-	color: #fff;
+	background-color: rgb(255, 200, 16) !important;
+	color: black;
 }
 .login-block {
 	display: block;
@@ -213,7 +216,7 @@ table > tbody > tr {
 	border-radius: 0.6rem;
 }
 .active-footer-tab {
-	color: #fc8019;
+	color: rgb(255, 200, 16);
 	font-weight: 600;
 }
 .footer-links {
@@ -439,13 +442,15 @@ table > tbody > tr {
 	width: 100%;
 }
 .btn-main {
+	background-color: rgb(255, 200, 16) !important;
 	width: 100%;
-	height: 4rem;
-	font-size: 1.2rem;
-	border-radius: 0;
-	color: #fff;
-	font-weight: 600;
-	text-transform: uppercase;
+    height: 4rem;
+    font-size: 16px;
+    border-radius: 8px;
+    color: #0A090B;
+    font-weight: 500;
+    text-transform: capitalize;
+    box-shadow: 4px 4px 20px rgba(235, 184, 14, 0.4);
 }
 /* Items/Restaurantinfo */
 
@@ -915,6 +920,7 @@ table > tbody > tr {
 /* Account/Addresses */
 
 .btn-new-address {
+	background-color: rgb(255, 200, 16) !important;
 	position: fixed !important;
 	width: 100%;
 	margin: 0 auto;
@@ -930,6 +936,7 @@ table > tbody > tr {
 	text-align: center;
 }
 .btn-save-address {
+	background-color: rgb(255, 200, 16) !important;
 	position: relative;
 	width: 100%;
 	margin: 0 auto;
@@ -1104,12 +1111,16 @@ table > tbody > tr {
 	text-align: center;
 	font-size: 1.5rem;
 	font-weight: 500;
-	color: black;
+	color: white;
 	border-radius: 0.275rem;
 	line-height: 4rem;
 	-webkit-transition: 0.2s linear all;
 	-o-transition: 0.2s linear all;
 	transition: 0.2s linear all;
+    height: 4rem;
+    border-radius: 8px;
+    text-transform: capitalize;
+    box-shadow: 4px 4px 20px rgba(235, 184, 14, 0.4);
 }
 .btn-unblur:hover {
 	background-color:rgb(255, 200, 16);
@@ -1632,17 +1643,39 @@ button.payButton {
 	font-size: 1.1rem !important;
 }
 
-.facebook-login-button,
-.google-login-button {
-	border: 0;
-	height: 3rem;
-	color: #000;
-	background-color: #fff;
+.facebook-login-button{
+	color: #fff;
+	background-color: #3b5998 !important;
 	font-weight: 500;
-	padding: 0 8px;
+	padding: 0 4px;
 	font-size: 1.1rem;
 	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+	width: 100%;
+    height: 4rem;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.login-or{
+	color:#bdbdbd;
+}
+
+.google-login-button {
+	color: #000;
+	background-color: #fff !important;
+	font-weight: 500;
+	padding: 0 4px;
+	font-size: 1.1rem;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+	width: 100%;
+    height: 4rem;
+    font-size: 16px;
+    border-radius: 8px;
+
 }
 
 .google-login-button:focus,
@@ -2452,9 +2485,9 @@ button[type="submit"]:disabled {
 	display: -ms-flexbox;
 	display: flex;
 	font-weight: 700;
-	border: 1px solid rgb(252, 128, 25);
+	border: 1px solid #000;
 	margin-bottom: 5px;
-	color: rgb(252, 128, 25);
+	color: #000;
 }
 
 .filter-no-found {

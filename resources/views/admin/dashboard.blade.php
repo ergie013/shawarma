@@ -24,36 +24,36 @@ Dashboard
                 <a class="block block-link-shadow text-left" href="javascript:void(0)">
                     <div class="block-content block-content-full clearfix">
                         <div class="float-right mt-10 d-none d-sm-block">
-                            <i class="dashboard-display-icon icon-basket"></i>
-                        </div>
-                        <div class="dashboard-display-number">{{ $displaySales }}</div>
-                        <div class="font-size-sm text-uppercase text-muted">Sales</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-6 col-xl-3 mb-2 mt-2">
-            <div class="col-xl-12 dashboard-display p-3">
-                <a class="block block-link-shadow text-left" href="javascript:void(0)">
-                    <div class="block-content block-content-full clearfix">
-                        <div class="float-right mt-10 d-none d-sm-block">
-                            <i class="dashboard-display-icon icon-users4"></i>
-                        </div>
-                        <div class="dashboard-display-number">{{ $displayUsers }}</div>
-                        <div class="font-size-sm text-uppercase text-muted">Users</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-6 col-xl-3 mb-2 mt-2">
-            <div class="col-xl-12 dashboard-display p-3">
-                <a class="block block-link-shadow text-left" href="javascript:void(0)">
-                    <div class="block-content block-content-full clearfix">
-                        <div class="float-right mt-10 d-none d-sm-block">
                             <i class="dashboard-display-icon icon-city"></i>
                         </div>
                         <div class="dashboard-display-number">{{ $displayRestaurants }}</div>
-                        <div class="font-size-sm text-uppercase text-muted">Stores</div>
+                        <div class="font-size-sm text-uppercase text-muted">Restaurants</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-6 col-xl-3 mb-2 mt-2">
+            <div class="col-xl-12 dashboard-display p-3">
+                <a class="block block-link-shadow text-left" href="javascript:void(0)">
+                    <div class="block-content block-content-full clearfix">
+                        <div class="float-right mt-10 d-none d-sm-block">
+                            <i class="dashboard-display-icon icon-basket"></i>
+                        </div>
+                        <div class="dashboard-display-number">{{ $displaySales }}</div>
+                        <div class="font-size-sm text-uppercase text-muted">Orders Processed</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-6 col-xl-3 mb-2 mt-2">
+            <div class="col-xl-12 dashboard-display p-3">
+                <a class="block block-link-shadow text-left" href="javascript:void(0)">
+                    <div class="block-content block-content-full clearfix">
+                        <div class="float-right mt-10 d-none d-sm-block">
+                            <i class="dashboard-display-icon icon-stack-star"></i>
+                        </div>
+                        <div class="dashboard-display-number">{{ $displaySales }}</div>
+                        <div class="font-size-sm text-uppercase text-muted">Items Sold</div>
                     </div>
                 </a>
             </div>
@@ -65,7 +65,7 @@ Dashboard
                         <div class="float-right mt-10 d-none d-sm-block">
                             <i class="dashboard-display-icon icon-coin-dollar"></i>
                         </div>
-                        <div class="dashboard-display-number">{{ config('settings.currencyFormat') }} {{ $displayEarnings }}</div>
+                        <div class="dashboard-display-number">{{ $displayEarnings }}</div>
                         <div class="font-size-sm text-uppercase text-muted">Earnings</div>
                     </div>
                 </a>
@@ -74,12 +74,11 @@ Dashboard
     </div>
     <div class="row">
         <div class="col-xl-6">
-            <div class="panel panel-flat dashboard-main-col mt-4" style="min-height: 30rem;">
+            <div class="panel panel-flat dashboard-main-col mt-4" style="min-height: 15rem;">
                 <div class="panel-heading">
-                    <h4 class="panel-title pl-3 pt-3"><strong>Recent Orders</strong></h4>
-                    <hr>
+                    <h4 class="panel-title pl-3 pt-3"><strong>New Orders</strong></h4>
                 </div>
-                <div class="table-responsive">
+                <div class="table-responsive @if(!count($orders)) hidden @endif">
                     <table class="table text-nowrap">
                         <thead>
                             <tr>
@@ -115,9 +114,16 @@ Dashboard
                         </tbody>
                     </table>
                 </div>
+                @if(!count($orders))
+                <div class="text-center text-muted pb-2" id="newOrdersNoOrdersMessage">
+                <img src="{{substr(url("/"), 0, strrpos(url("/"), '/'))}}/assets/backend/global_assets/images/interface1.png" height="80px" margin="20px">
+                    <h4> No New Orders. </h4>
+                </div>
+                @endif
+            </div>
             </div>
         </div>
-        <div class="col-xl-6 d-none d-md-block">
+        <!-- <div class="col-xl-6 d-none d-md-block">
             <div class="panel panel-flat">
                 <div class="panel-body">
                     @if($ifAnyOrders)
@@ -128,7 +134,7 @@ Dashboard
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="row">
         <div class="col-xl-12">
             <div class="panel panel-flat dashboard-main-col mt-4">

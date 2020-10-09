@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-md-8 mt-4" id="printThis">
             <div class="card">
-                <div href="#" class="btn btn-block content-group" style="text-align: left; background-color: #8360c3; color: #fff; border-radius: 0;"><strong style="font-size: 1.3rem;">{{ $order->unique_order_id }}</strong>
+                <div href="#" class="btn btn-block content-group" style="text-align: left; background-color: #ffc810; color: #fff; border-radius: 0;"><strong style="font-size: 1.3rem;">{{ $order->unique_order_id }}</strong>
                     <a href="javascript:void(0)" id="printButton" class="btn btn-sm" style="color: #fff; border: 1px solid #ccc; float: right;">Print</a>
                 </div>
                 <div class="p-3">

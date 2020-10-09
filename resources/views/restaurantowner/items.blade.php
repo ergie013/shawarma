@@ -403,7 +403,7 @@
        new Switchery(recommendeditem, { color: '#f44336' });
     
        var popularitem = document.querySelector('.popularitem');
-       new Switchery(popularitem, { color: '#8360c3' });
+       new Switchery(popularitem, { color: '#ffc810' });
     
        var newitem = document.querySelector('.newitem');
        new Switchery(newitem, { color: '#333' });
@@ -422,11 +422,11 @@
         //Switch Action Function  
          var elems = document.querySelectorAll('.action-switch');
          for (var i = 0; i < elems.length; i++) {
-             var switchery = new Switchery(elems[i], { color: '#8360c3' });
+             var switchery = new Switchery(elems[i], { color: '#ffc810' });
          }
          var elemsmb = document.querySelectorAll('.action-switch-mobile');
          for (var i = 0; i < elemsmb.length; i++) {
-             var switchery = new Switchery(elemsmb[i], { color: '#8360c3' });
+             var switchery = new Switchery(elemsmb[i], { color: '#ffc810' });
          }     
 
          $('.action-switch, .action-switch-mobile').click(function(event) {

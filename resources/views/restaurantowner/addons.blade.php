@@ -136,13 +136,13 @@
          if (Array.prototype.forEach) {
                 var elems = Array.prototype.slice.call(document.querySelectorAll('.action-switch'));
                 elems.forEach(function(html) {
-                    var switchery = new Switchery(html, { color: '#8360c3' });
+                    var switchery = new Switchery(html, { color: '#ffc810' });
                 });
             }
             else {
                 var elems = document.querySelectorAll('.action-switch');
                 for (var i = 0; i < elems.length; i++) {
-                    var switchery = new Switchery(elems[i], { color: '#8360c3' });
+                    var switchery = new Switchery(elems[i], { color: '#ffc810' });
                 }
             }
 
