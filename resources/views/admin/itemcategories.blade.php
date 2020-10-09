@@ -5,8 +5,8 @@
 <div class="page-header">
     <div class="page-header-content header-elements-md-inline">
         <div class="page-title d-flex">
-            <h4><i class="icon-circle-right2 mr-2"></i>
-                <span class="font-weight-bold mr-2">TOTAL</span>
+            <h4>
+                <span class="font-weight-bold mr-2">Menu Categories</span>
                 <span class="badge badge-primary badge-pill animated flipInX">{{ $count }}</span>
             </h4>
             <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -16,13 +16,23 @@
                 <button type="button" class="btn btn-secondary btn-labeled btn-labeled-left"
                     data-toggle="modal" data-target="#addNewItemCategory">
                 <b><i class="icon-plus2"></i></b>
-                Add New Category
+                Add New Menu Category
                 </button>
             </div>
         </div>
     </div>
 </div>
 <div class="content">
+<form action="{{ route('admin.post.searchAddonCategories') }}" method="GET">
+        <div class="form-group1 form-group-feedback form-group-feedback-right search-box">
+            <input type="text" class="form-control form-control-lg search-input"
+                placeholder="Search" name="query">
+            <div class="form-control-feedback form-control-feedback-lg">
+                <i class="icon-search4"></i>
+            </div>
+        </div>
+        @csrf
+    </form>
     <div class="card">
         <div class="card-body">
             <div class="table-responsive">
@@ -74,6 +84,14 @@
                 </table>
             </div>
         </div>
+        @if(!count($itemCategories))
+                <div class="text-center text-muted pb-2" id="noRestaurantMessage" style="min-height: 15rem;">
+                <img src="{{substr(url("/"), 0, strrpos(url("/"), '/'))}}/assets/backend/global_assets/images/web1.png" height="80px" margin="20px">
+                    <h4 style="margin-top: 20px; color: #737679"> No Menu Category yet. </h4>
+                </div>
+                @endif
+            </div>
+            </div>
     </div>
 </div>
 <div id="addNewItemCategory" class="modal fade" tabindex="-1">
@@ -143,13 +161,13 @@
         if (Array.prototype.forEach) {
                var elems = Array.prototype.slice.call(document.querySelectorAll('.action-switch'));
                elems.forEach(function(html) {
-                   var switchery = new Switchery(html, { color: '#8360c3' });
+                   var switchery = new Switchery(html, { color: '#ffc810' });
                });
            }
            else {
                var elems = document.querySelectorAll('.action-switch');
                for (var i = 0; i < elems.length; i++) {
-                   var switchery = new Switchery(elems[i], { color: '#8360c3' });
+                   var switchery = new Switchery(elems[i], { color: '#ffc810' });
                }
            }
 

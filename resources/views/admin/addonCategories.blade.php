@@ -5,12 +5,12 @@
 <div class="page-header">
     <div class="page-header-content header-elements-md-inline">
         <div class="page-title d-flex">
-            <h4><i class="icon-circle-right2 mr-2"></i>
+            <h4>
                 @if(empty($query))
-                <span class="font-weight-bold mr-2">TOTAL</span>
+                <span class="font-weight-bold mr-2">Addon Categories</span>
                 <span class="badge badge-primary badge-pill animated flipInX">{{ $count }}</span>
                 @else
-                <span class="font-weight-bold mr-2">TOTAL</span>
+                <span class="font-weight-bold mr-2">Addon Categories</span>
                 <span class="badge badge-primary badge-pill animated flipInX mr-2">{{ $count }}</span>
                 <span class="font-weight-bold mr-2">Results for "{{ $query }}"</span>
                 @endif
@@ -29,9 +29,9 @@
 </div>
 <div class="content">
     <form action="{{ route('admin.post.searchAddonCategories') }}" method="GET">
-        <div class="form-group form-group-feedback form-group-feedback-right search-box">
+        <div class="form-group1 form-group-feedback form-group-feedback-right search-box">
             <input type="text" class="form-control form-control-lg search-input"
-                placeholder="Search with addon category name" name="query">
+                placeholder="Search" name="query">
             <div class="form-control-feedback form-control-feedback-lg">
                 <i class="icon-search4"></i>
             </div>
@@ -88,6 +88,14 @@
                 </div>
             </div>
         </div>
+        @if(!count($addonCategories))
+                <div class="text-center text-muted pb-2" id="noRestaurantMessage" style="min-height: 15rem;">
+                <img src="{{substr(url("/"), 0, strrpos(url("/"), '/'))}}/assets/backend/global_assets/images/web1.png" height="80px" margin="20px">
+                    <h4 style="margin-top: 20px; color: #737679"> No Addon Category yet. </h4>
+                </div>
+                @endif
+            </div>
+            </div>
     </div>
 </div>
 @endsection

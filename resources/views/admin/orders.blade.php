@@ -34,8 +34,8 @@
 <div class="page-header">
     <div class="page-header-content header-elements-md-inline">
         <div class="page-title d-flex">
-            <h4><i class="icon-circle-right2 mr-2"></i>
-                <span class="font-weight-bold mr-2">TOTAL</span>
+            <h4>
+                <span class="font-weight-bold mr-2">Orders</span>
                 <span class="badge badge-primary badge-pill animated flipInX">{{ $count }}</span>
             </h4>
             <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -44,9 +44,9 @@
 </div>
 <div class="content">
     <form action="{{ route('admin.post.searchOrders') }}" method="GET">
-        <div class="form-group form-group-feedback form-group-feedback-right search-box">
+        <div class="form-group1 form-group-feedback form-group-feedback-right search-box">
             <input type="text" class="form-control form-control-lg search-input"
-                placeholder="Search with order id..." name="query">
+                placeholder="Search" name="query">
             <div class="form-control-feedback form-control-feedback-lg">
                 <i class="icon-search4"></i>
             </div>
@@ -134,6 +134,14 @@
                 </div>
             </div>
         </div>
+        @if(!count($orders))
+                <div class="text-center text-muted pb-2" id="noRestaurantMessage" style="min-height: 15rem;">
+                <img src="{{substr(url("/"), 0, strrpos(url("/"), '/'))}}/assets/backend/global_assets/images/orderlist.png" height="80px" margin="20px">
+                    <h4 style="margin-top: 20px; color: #737679"> No Orders yet. </h4>
+                </div>
+                @endif
+            </div>
+            </div>
     </div>
 </div>
 <script>

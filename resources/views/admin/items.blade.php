@@ -5,12 +5,12 @@
 <div class="page-header">
     <div class="page-header-content header-elements-md-inline">
         <div class="page-title d-flex">
-            <h4><i class="icon-circle-right2 mr-2"></i>
+            <h4>
                 @if(empty($query))
-                <span class="font-weight-bold mr-2">TOTAL</span>
+                <span class="font-weight-bold mr-2">Items</span>
                 <span class="badge badge-primary badge-pill animated flipInX">{{ $count }}</span>
                 @else
-                <span class="font-weight-bold mr-2">TOTAL</span>
+                <span class="font-weight-bold mr-2">Items</span>
                 <span class="badge badge-primary badge-pill animated flipInX mr-2">{{ $count }}</span>
                 <span class="font-weight-bold mr-2">Results for "{{ $query }}"</span>
                 @endif
@@ -24,18 +24,13 @@
                     <b><i class="icon-plus2"></i></b>
                     Add New Item
                 </button>
-                <button type="button" class="btn btn-secondary btn-labeled btn-labeled-left" id="addBulkItem"
-                    data-toggle="modal" data-target="#addBulkItemModal">
-                    <b><i class="icon-database-insert"></i></b>
-                    Bulk CSV Upload
-                </button>
             </div>
         </div>
     </div>
 </div>
 <div class="content">
     <form action="{{ route('admin.post.searchItems') }}" method="GET">
-        <div class="form-group form-group-feedback form-group-feedback-right search-box">
+        <div class="form-group1 form-group-feedback form-group-feedback-right search-box">
             <input type="text" class="form-control form-control-lg search-input" placeholder="Search with item name"
                 name="query">
             <div class="form-control-feedback form-control-feedback-lg">
@@ -110,6 +105,14 @@
                 <div class="mt-3">
                     {{ $items->appends($_GET)->links() }}
                 </div>
+            </div>
+            @if(!count($items))
+                <div class="text-center text-muted pb-2" id="noRestaurantMessage" style="min-height: 15rem;">
+                <img src="{{substr(url("/"), 0, strrpos(url("/"), '/'))}}/assets/backend/global_assets/images/web1.png" height="80px" margin="20px">
+                    <h4 style="margin-top: 20px; color: #737679"> No item yet. </h4>
+                </div>
+                @endif
+            </div>
             </div>
         </div>
     </div>
@@ -408,7 +411,7 @@
        new Switchery(recommendeditem, { color: '#f44336' });
     
        var popularitem = document.querySelector('.popularitem');
-       new Switchery(popularitem, { color: '#8360c3' });
+       new Switchery(popularitem, { color: '#ffc810' });
     
        var newitem = document.querySelector('.newitem');
        new Switchery(newitem, { color: '#333' });
@@ -428,11 +431,11 @@
          //Switch Action Function  
           var elems = document.querySelectorAll('.action-switch');
           for (var i = 0; i < elems.length; i++) {
-              var switchery = new Switchery(elems[i], { color: '#8360c3' });
+              var switchery = new Switchery(elems[i], { color: '#ffc810' });
           }
           var elemsmb = document.querySelectorAll('.action-switch-mobile');
           for (var i = 0; i < elemsmb.length; i++) {
-              var switchery = new Switchery(elemsmb[i], { color: '#8360c3' });
+              var switchery = new Switchery(elemsmb[i], { color: '#ffc810' });
           }     
 
           $('.action-switch, .action-switch-mobile').click(function(event) {

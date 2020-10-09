@@ -291,7 +291,7 @@
         new Switchery(recommendeditem, { color: '#f44336' });
     
         var popularitem = document.querySelector('.popularitem');
-        new Switchery(popularitem, { color: '#8360c3' });
+        new Switchery(popularitem, { color: '#ffc810' });
     
         var newitem = document.querySelector('.newitem');
         new Switchery(newitem, { color: '#333' });
