@@ -382,7 +382,7 @@ class Login extends Component {
 						</div>
 					</div>
 					<img
-						src="/assets/img/login-header.png"
+						src="/assets/img/login-head.png"
 						className="login-image pull-right mr-15"
 						alt="login-header"
 					/>

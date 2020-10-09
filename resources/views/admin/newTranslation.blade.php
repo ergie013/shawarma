@@ -267,14 +267,14 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-lg-3 col-form-label"><strong>Register Button Text</strong></label>
+                    <label class="col-lg-3 col-form-label"><strong>Sign Up Button Text</strong></label>
                     <div class="col-lg-9">
                         <input type="text" class="form-control form-control-lg" name="firstScreenRegisterBtn"
                             value="{{ config('settings.firstScreenRegisterBtn') }}" placeholder="Register Button">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-lg-3 col-form-label"><strong>Register Text</strong></label>
+                    <label class="col-lg-3 col-form-label"><strong>Sign-up Text</strong></label>
                     <div class="col-lg-9">
                         <input type="text" class="form-control form-control-lg" name="registerRegisterTitle"
                             value="{{ config('settings.registerRegisterTitle') }}" placeholder="Register Text">

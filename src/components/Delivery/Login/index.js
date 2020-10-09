@@ -110,7 +110,7 @@ class Login extends Component {
 						</div>
 					</div>
 					<img
-						src="/assets/img/login-header.png"
+						src="/assets/img/login-head.png"
 						className="login-image pull-right mr-15"
 						alt="login-header"
 					/>
@@ -176,26 +176,8 @@ class Login extends Component {
 							</button>
 							
 						</div>
-						<div className="mt-20 px-15 pt-15 button-block">
-							<button
-								type="submit"
-								className="btn btn-main"
-								style={{ backgroundColor: localStorage.getItem("storeColor") }}
-							>
-								{localStorage.getItem("loginLoginTitle")}
-							</button>
-							
-						</div>
-						<div className="mt-20 px-15 pt-15 button-block">
-							<button
-								type="submit"
-								className="btn btn-main"
-								style={{ backgroundColor: localStorage.getItem("storeColor") }}
-							>
-								{localStorage.getItem("loginLoginTitle")}
-							</button>
-							
-						</div>
+						
+					
 					</form>
 
 
