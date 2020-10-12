@@ -110,22 +110,25 @@ body {
 	margin-top: 0.9375rem;
 }
 .btn-setup-location {
-	background-color: rgb(255, 200, 16);
+	background-color: rgb(255, 200, 30) !important;
 	width: 16rem;
 	height: 4rem;
 	margin: 0 auto;
 	font-size: 1.1rem;
 	font-weight: 700;
 	display: block;
-	color: #fff;
+	color: white;
 	text-transform: uppercase;
 	border-radius: 1px;
 	text-align: center;
 	line-height: 2.7rem;
+	border-radius: 8px;
+    text-transform: capitalize;
+    box-shadow: 4px 4px 20px rgba(235, 184, 14, 0.4);
 }
 .btn-setup-location:hover {
-	color: #fff;
-	background-color: rgb(255, 200, 16);
+	color: black;
+	background-color: rgb(255, 200, 16) !important;
 }
 .login-block {
 	display: block;
@@ -441,13 +444,15 @@ table > tbody > tr {
 	width: 100%;
 }
 .btn-main {
+	background-color: rgb(255, 200, 16) !important;
 	width: 100%;
-	height: 4rem;
-	font-size: 1.2rem;
-	border-radius: 0;
-	color: #fff;
-	font-weight: 600;
-	text-transform: uppercase;
+    height: 4rem;
+    font-size: 16px;
+    border-radius: 8px;
+    color: #0A090B;
+    font-weight: 500;
+    text-transform: capitalize;
+    box-shadow: 4px 4px 20px rgba(235, 184, 14, 0.4);
 }
 /* Items/Restaurantinfo */
 
@@ -917,6 +922,7 @@ table > tbody > tr {
 /* Account/Addresses */
 
 .btn-new-address {
+	background-color: rgb(255, 200, 16) !important;
 	position: fixed !important;
 	width: 100%;
 	margin: 0 auto;
@@ -1112,6 +1118,10 @@ table > tbody > tr {
 	-webkit-transition: 0.2s linear all;
 	-o-transition: 0.2s linear all;
 	transition: 0.2s linear all;
+	height: 4rem;
+    border-radius: 8px;
+    text-transform: capitalize;
+    box-shadow: 4px 4px 20px rgba(235, 184, 14, 0.4);
 }
 .btn-unblur:hover {
 	background-color:rgb(255, 200, 16);
@@ -1634,17 +1644,37 @@ button.payButton {
 	font-size: 1.1rem !important;
 }
 
-.facebook-login-button,
-.google-login-button {
-	border: 0;
-	height: 3rem;
+.facebook-login-button{
+	width: 100%;
+    height: 4rem;
+    font-size: 16px;
+    border-radius: 8px;
 	color: #000;
-	background-color: #fff;
+	background-color: #3b5998 !important;
 	font-weight: 500;
-	padding: 0 8px;
+	padding: 0 4px;
 	font-size: 1.1rem;
 	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.google-login-button {
+	width: 100%;
+    height: 4rem;
+    font-size: 16px;
+    border-radius: 8px;
+	color: #fff;
+	background-color: #fff !important;
+	font-weight: 500;
+	padding: 0 4px;
+	font-size: 1.1rem;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.login-or{
+	color:#bdbdbd;
+	text-align: center !important;
+
 }
 
 .google-login-button:focus,
