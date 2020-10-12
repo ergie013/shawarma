@@ -117,7 +117,7 @@ Dashboard
                 @if(!count($orders))
                 <div class="text-center text-muted pb-2" id="newOrdersNoOrdersMessage">
                 <img src="{{substr(url("/"), 0, strrpos(url("/"), '/'))}}/assets/backend/global_assets/images/interface1.png" height="80px" margin="20px">
-                    <h4> No New Orders. </h4>
+                    <h4 style="margin:20px"> No New Orders to show. </h4>
                 </div>
                 @endif
             </div>
